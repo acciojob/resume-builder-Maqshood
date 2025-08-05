@@ -1,13 +1,16 @@
+import { Routes, Route } from 'react-router-dom';
+import Profile from './pages/Profile';
+import Education from './pages/Education';
+// ... other imports
 
-import React from "react";
-import './../styles/App.css';
-
-const App = () => {
+function App() {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Profile />} />
+      <Route path="/education" element={<Education />} />
+      {/* Add other routes */}
+    </Routes>
+  );
 }
 
-export default App
+export default App;
